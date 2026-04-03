@@ -45,7 +45,7 @@ e.preventDefault()
 const nome=document.getElementById("nome").value
 const mensagem=document.getElementById("mensagem").value
 
-const telefone="5581998163044"
+const telefone="5581999417544"
 
 const texto = `Olá Gleice e Gustavo! 💛
 
