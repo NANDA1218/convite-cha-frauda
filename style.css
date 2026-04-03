@@ -1,0 +1,323 @@
+:root{
+--marrom-claro:#E8DFD0;
+--bege:#F5EFE6;
+--marrom:#8D7B68;
+--dourado:#C4A484;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+  background: var(--marrom-claro);
+  background-image: url("img/fundo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--marrom);
+}
+.section{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:120px 20px;
+
+  background-image: url("img/fundo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* MENU */
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:#ffffffc7;
+backdrop-filter:blur(10px);
+z-index:100;
+}
+
+.nav-menu{
+display:flex;
+justify-content:center;
+gap:30px;
+list-style:none;
+padding:15px;
+}
+
+.nav-btn{
+text-decoration:none;
+color:var(--marrom);
+font-weight:600;
+padding:8px 15px;
+border-radius:20px;
+border:none;
+background:transparent;
+cursor:pointer;
+}
+
+.nav-btn:hover{
+background:var(--dourado);
+color:white;
+}
+
+/* CAPA */
+
+.hero{
+position:relative;
+width:100%;
+min-height:100vh; /* corrigido */
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+padding:80px 20px;
+}
+
+.hero-bg{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+object-position:center;
+top:0;
+left:0;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+text-align:center;
+background:rgba(255,255,255,0.6);
+backdrop-filter:blur(8px);
+padding:40px;
+border-radius:40px;
+max-width:600px;
+width:90%;
+}
+
+/* SEÇÕES */
+
+.section{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:120px 20px;
+}
+
+/* CARD */
+
+.glass-card{
+background:#ffffffd9;
+padding:40px;
+border-radius:40px;
+max-width:650px;
+width:100%;
+text-align:center;
+box-shadow:0 10px 40px rgba(0,0,0,0.15);
+}
+
+/* TITULO */
+
+.titulo{
+font-family:'Great Vibes',cursive;
+font-size:55px;
+margin-bottom:10px;
+color:var(--marrom);
+}
+
+/* BOTÃO */
+
+.gold-btn{
+background:var(--dourado);
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:25px;
+cursor:pointer;
+margin-top:10px;
+}
+
+.gold-btn:hover{
+background:var(--marrom);
+}
+
+/* FORM */
+
+input,textarea{
+width:100%;
+padding:12px;
+margin-top:10px;
+border-radius:10px;
+border:1px solid #ddd;
+}
+
+/* LISTA */
+
+.mimos-list{
+text-align:left;
+display:inline-block;
+margin-top:20px;
+}
+
+/* BALÕES */
+
+.balloon-container{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:999;
+  overflow:hidden;
+}
+
+.balloon{
+  position:absolute;
+  bottom:-120px;
+  width:35px;
+  height:45px;
+  border-radius:50%;
+  
+  /* COR DOURADA COM GRADIENTE */
+  background: radial-gradient(circle at 30% 30%, #fff3d0, #d4af37, #b8962e);
+
+  opacity:0.8;
+
+  animation: subir linear infinite;
+}
+
+/* VARIAÇÕES (deixa natural e bonito) */
+.balloon:nth-child(1){ left:10%; animation-duration:12s; }
+.balloon:nth-child(2){ left:25%; animation-duration:15s; }
+.balloon:nth-child(3){ left:40%; animation-duration:10s; }
+.balloon:nth-child(4){ left:55%; animation-duration:18s; }
+.balloon:nth-child(5){ left:70%; animation-duration:13s; }
+.balloon:nth-child(6){ left:85%; animation-duration:16s; }
+.balloon:nth-child(7){ left:50%; animation-duration:14s; }
+
+/* ANIMAÇÃO */
+@keyframes subir{
+  0%{
+    transform: translateY(0) scale(1);
+    opacity:0;
+  }
+  10%{
+    opacity:0.8;
+  }
+  100%{
+    transform: translateY(-120vh) scale(1.2);
+    opacity:0;
+  }
+}
+
+/* TEMA ESCURO */
+
+.dark-mode{
+background:#634024;
+}
+
+footer{
+text-align:center;
+padding:20px;
+}
+
+/* BOTÃO WHATSAPP */
+
+.whatsapp-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:28px;
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+z-index:1000;
+}
+
+.whatsapp-btn:hover{
+transform:scale(1.1);
+}
+
+#music-btn{
+background:#c49a6c;
+color:white;
+border:none;
+padding:8px 15px;
+border-radius:20px;
+cursor:pointer;
+font-weight:bold;
+}
+
+#music-btn:hover{
+background:#a67c52;
+}
+
+/* RESPONSIVO (CELULAR) */
+
+@media (max-width:768px){
+
+  body{
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+  }
+
+  .hero{
+    min-height:auto;
+    padding:120px 15px 60px;
+  }
+
+  .hero-bg{
+    object-fit: contain; /* MOSTRA IMAGEM INTEIRA */
+  }
+
+  .hero-content{
+    margin-top:80px;
+    padding:25px;
+    max-width:95%;
+  }
+
+  .glass-card{
+    padding:25px;
+  }
+
+  .nav-menu{
+    flex-wrap:wrap;
+    gap:10px;
+  }
+
+}
+.section{
+  background-size: contain;
+  background-position: center top;
+}
+@media (max-width:768px){
+  .balloon{
+    width:25px;
+    height:35px;
+  }
+}
+
+/* ROLAGEM SUAVE */
+
+html{
+scroll-behavior:smooth;
+}
